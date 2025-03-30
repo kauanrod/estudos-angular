@@ -1,0 +1,13 @@
+<p>{{teste}}</p>
+<button [attr.aria-label]="idButton"></button> <!--ACESSANDO O ATRIBUTO E PASSANDO O VALOR DINAMICAMENTE-->
+<button (click)="submit($event)">Clique aqui!</button>
+
+<!--COMO ERA FEITO ANTIGAMENTE - diretivas do Angular-->
+<h1 *ngIf="deveMostrarTitulo">true</h1>
+
+<!--COMO É FEITO ATUALMENTE-->
+@if(deveMostrarTitulo) {
+    <h1>true</h1>
+} @else {
+    <h1>false</h1>
+}
