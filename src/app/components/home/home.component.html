@@ -1,6 +1,6 @@
 <p>{{teste}}</p>
 <button [attr.aria-label]="idButton"></button> <!--ACESSANDO O ATRIBUTO E PASSANDO O VALOR DINAMICAMENTE-->
-<button (click)="submit($event)">Clique aqui!</button>
+<button (click)="submit()">Clique aqui!</button>
 
 <!--COMO ERA FEITO ANTIGAMENTE - diretivas do Angular-->
 <h1 *ngIf="deveMostrarTitulo">true</h1>
@@ -11,3 +11,12 @@
 } @else {
     <h1>false</h1>
 }
+
+<!--MODO ANTIGO DE UTILIZAR O FOR-->
+<p *ngFor="let item of items">{{item}}</p>
+
+@for (item of items; track $index) {
+    <p>{{item}}</p>
+}
+
+<!-- <h1>{{ teste2 }}</h1> -->
